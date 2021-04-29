@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - bencodezen
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: envinfo
+    versions:
+    - 7.7.3
+    - 7.7.4
+  - dependency-name: prismjs
+    versions:
+    - 1.21.0
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
